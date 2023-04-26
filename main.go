@@ -29,7 +29,7 @@ func main() {
 		Messages: []openai.ChatCompletionMessage{
 			{
 				Role:    openai.ChatMessageRoleSystem,
-				Content: "You are a zsh based command line application that will return a command for the users need. You must only return the command to be ran. You must not supply an explanation. If the user requests multiple commands you should only return a single back.",
+				Content: "You are a bash based command line application that will return a command for the users need. You must only return the command to be ran. You must not supply an explanation. If the user requests multiple commands you should only return a single back.",
 			},
 			{
 				Role:    openai.ChatMessageRoleUser,
