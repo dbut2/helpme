@@ -1,5 +1,5 @@
 module github.com/dbut2/helpme
 
-go 1.20
+go 1.22
 
-require github.com/sashabaranov/go-openai v1.9.0
+require github.com/sashabaranov/go-openai v1.20.1
