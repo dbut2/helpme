@@ -1,2 +1,2 @@
-github.com/sashabaranov/go-openai v1.28.2 h1:Q3pi34SuNYNN7YrqpHlHbpeYlf75ljgHOAVM/r1yun0=
-github.com/sashabaranov/go-openai v1.28.2/go.mod h1:lj5b/K+zjTSFxVLijLSTDZuP7adOgerWeFyZLUhAKRg=
+github.com/sashabaranov/go-openai v1.29.0 h1:eBH6LSjtX4md5ImDCX8hNhHQvaRf22zujiERoQpsvLo=
+github.com/sashabaranov/go-openai v1.29.0/go.mod h1:lj5b/K+zjTSFxVLijLSTDZuP7adOgerWeFyZLUhAKRg=
