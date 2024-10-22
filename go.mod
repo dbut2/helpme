@@ -1,5 +1,5 @@
-module github.com/dbut2/helpme
+module dbut.dev/helpme
 
-go 1.22
+go 1.23.2
 
-require github.com/sashabaranov/go-openai v1.29.2
+require github.com/ollama/ollama v0.3.14
