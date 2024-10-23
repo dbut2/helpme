@@ -8,10 +8,19 @@ import (
 	"strings"
 
 	"github.com/ollama/ollama/api"
+	"github.com/sethvargo/go-envconfig"
 )
 
+type Config struct {
+	Model string `env:"HELPME_MODEL, default=codegemma:instruct"`
+}
+
 func main() {
-	const model = "codegemma:instruct"
+	var config Config
+	err := envconfig.Process(context.Background(), &config)
+	if err != nil {
+		panic(err.Error())
+	}
 
 	args := strings.TrimSpace(strings.Join(os.Args[1:], " "))
 	if args == "" {
@@ -36,16 +45,16 @@ func main() {
 
 	contains := false
 	for _, m := range list.Models {
-		if m.Model == model {
+		if m.Model == config.Model {
 			contains = true
 			break
 		}
 	}
 
 	if !contains {
-		fmt.Printf("Downloading %s...\n", model)
+		fmt.Printf("Downloading %s...\n", config.Model)
 		err = client.Pull(context.Background(), &api.PullRequest{
-			Model:    model,
+			Model:    config.Model,
 			Insecure: true,
 		}, func(response api.ProgressResponse) error {
 			return nil
@@ -56,23 +65,15 @@ func main() {
 		fmt.Printf("Done")
 	}
 
-	prompt := "You are a bash based command line application running on %s that will return a command for the users need. You must only return the command to be ran. You must not supply an explanation. If the user requests multiple commands you should only return a single back. Don't wrap in a code block."
+	prompt := "You are a bash based command line application running on %s that will return a command for the users need. You must only return the command to be ran. You must not supply an explanation."
 
-	err = client.Chat(context.Background(), &api.ChatRequest{
-		Model: model,
-		Messages: []api.Message{
-			{
-				Role:    "system",
-				Content: fmt.Sprintf(prompt, runtime.GOOS),
-			},
-			{
-				Role:    "user",
-				Content: args,
-			},
-		},
+	err = client.Generate(context.Background(), &api.GenerateRequest{
+		Model:  config.Model,
+		Prompt: args,
+		System: fmt.Sprintf(prompt, runtime.GOOS),
 		Stream: ptrTo(true),
-	}, func(response api.ChatResponse) error {
-		fmt.Print(response.Message.Content)
+	}, func(response api.GenerateResponse) error {
+		fmt.Print(response.Response)
 		return nil
 	})
 	if err != nil {
