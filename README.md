@@ -1,31 +1,94 @@
 # helpme
 
-helpme is a command-line interface (CLI) tool that leverages AI to generate commands based on user input. It uses the GPT-3.5 Turbo model from OpenAI to understand the user's needs and provides the corresponding command(s) to execute.
+A smart command-line assistant that generates shell commands using AI. Simply describe what you want to do, and `helpme` will suggest the appropriate command.
+
+## Features
+
+- Supports multiple AI providers:
+    - Anthropic Claude (default)
+    - OpenAI ChatGPT
+    - Ollama (local AI models)
+- Stream-based output for real-time responses
+- Customizable system prompts
+- Cross-platform support
 
 ## Installation
 
-To install helpme, use the following command:
-
 ```bash
-go install github.com/dbut2/helpme@latest
+go install dbut.dev/helpme@latest
+```
+
+## Configuration
+
+The tool can be configured using environment variables:
+
+### General Configuration
+- `HELPME_TOOL`: Choose the AI provider ("CLAUDE", "CHATGPT", or "OLLAMA")
+- `HELPME_SYSTEM_PROMPT`: Custom system prompt for the AI
+- `HELPME_DEBUG`: Enable debug mode (default: false)
+
+### Provider-specific Configuration
+
+#### Claude (Default)
+```bash
+export ANTHROPIC_API_TOKEN="your-api-key"
+```
+
+#### OpenAI
+```bash
+export OPENAI_TOKEN="your-api-key"
+export OPENAI_MODEL="gpt-4" # Optional
+```
+
+#### Ollama
+```bash
+export HELPME_MODEL="codegemma:instruct" # Optional, this is the default model
 ```
 
 ## Usage
 
-Before using helpme, ensure you have set the `OPENAI_TOKEN` environment variable with your OpenAI API key. Then, simply run the `helpme` command followed by your query.
-
 ```bash
-helpme <your_query>
+helpme <your command description>
 ```
 
-## Example
+### Examples
 
 ```bash
-helpme create a new directory named mydir
+# Find large files
+helpme find files larger than 1GB in the current directory
+
+# Process text
+helpme count number of lines in all python files recursively
+
+# System administration
+helpme show me system memory usage in a human readable format
+
+# Git operations
+helpme undo my last git commit but keep the changes
 ```
 
-This will generate the appropriate command, such as:
+## Building from Source
 
+1. Clone the repository:
 ```bash
-mkdir mydir
+git clone https://github.com/dbut2/helpme.git
+cd helpme
 ```
+
+2. Build the project:
+```bash
+go build
+```
+
+3. (Optional) Install locally:
+```bash
+go install
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
