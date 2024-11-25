@@ -2,10 +2,14 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
+github.com/liushuangls/go-anthropic v1.6.0 h1:8hDEn/EJkeerOFwnQ10efTlRIU6VO+IxE6u6IinphBg=
+github.com/liushuangls/go-anthropic v1.6.0/go.mod h1:sUg9f/ZHoia6Nc8zoNvT7+KavHwMq2eL3VY1Mgf6I7Y=
 github.com/ollama/ollama v0.4.0 h1:8CxFpQxHmCUkXypNl4Suy9+X4SNdsCvE8DY5ih7BIrU=
 github.com/ollama/ollama v0.4.0/go.mod h1:QDxM/t2teuubbfN/FT2pBRMPF0K1N3IakgT1OZBD4NY=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/sashabaranov/go-openai v1.35.7 h1:icyrRbkYoKPa4rbO1WSInpJu3qDQrPEnsoJVZ6QymdI=
+github.com/sashabaranov/go-openai v1.35.7/go.mod h1:lj5b/K+zjTSFxVLijLSTDZuP7adOgerWeFyZLUhAKRg=
 github.com/sethvargo/go-envconfig v1.1.0 h1:cWZiJxeTm7AlCvzGXrEXaSTCNgip5oJepekh/BOQuog=
 github.com/sethvargo/go-envconfig v1.1.0/go.mod h1:JLd0KFWQYzyENqnEPWWZ49i4vzZo/6nRidxI8YvGiHw=
 github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
