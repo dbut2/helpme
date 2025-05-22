@@ -28,7 +28,7 @@ func NewClaude(config *ClaudeConfig) (*Claude, error) {
 func (c *Claude) Generate(ctx context.Context, system, prompt string, ch chan string, errCh chan error) error {
 	_, err := c.client.CreateMessagesStream(ctx, anthropic.MessagesStreamRequest{
 		MessagesRequest: anthropic.MessagesRequest{
-			Model: "claude-3-7-sonnet-latest",
+			Model: "claude-sonnet-4-latest",
 			Messages: []anthropic.Message{
 				{
 					Role: anthropic.RoleUser,
