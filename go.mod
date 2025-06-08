@@ -6,7 +6,7 @@ require (
 	github.com/liushuangls/go-anthropic v1.6.0
 	github.com/ollama/ollama v0.9.0
 	github.com/sashabaranov/go-openai v1.40.1
-	github.com/sethvargo/go-envconfig v1.1.1
+	github.com/sethvargo/go-envconfig v1.3.0
 )
 
 require (
