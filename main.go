@@ -5,24 +5,30 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/melt-inc/autoupgrade"
 )
 
 func main() {
 	ctx := context.Background()
 
+	defer autoupgrade.Upgrade(ctx, "dbut.dev/helpme")
+
 	args := strings.TrimSpace(strings.Join(os.Args[1:], " "))
 	if args == "" {
-		fmt.Println("no argument provided")
-		os.Exit(1)
+		fmt.Printf("Error: no argument provided\n")
+		return
 	}
 
 	app, err := NewApp(ctx)
 	if err != nil {
-		panic(err.Error())
+		fmt.Printf("Error: %v\n", err.Error())
+		return
 	}
 
 	err = app.Run(ctx, args)
 	if err != nil {
-		panic(err.Error())
+		fmt.Printf("Error: %v\n", err.Error())
+		return
 	}
 }
