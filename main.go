@@ -12,7 +12,10 @@ import (
 func main() {
 	ctx := context.Background()
 
-	defer autoupgrade.Upgrade(ctx, "dbut.dev/helpme")
+	ur := autoupgrade.UpgradeBackground(ctx, "dbut.dev/helpme")
+	defer func() {
+		<-ur
+	}()
 
 	args := strings.TrimSpace(strings.Join(os.Args[1:], " "))
 	if args == "" {
