@@ -4,7 +4,7 @@ github.com/liushuangls/go-anthropic
 # github.com/melt-inc/autoupgrade v0.0.0-20250713011133-88a78ff3b355
 ## explicit; go 1.21.3
 github.com/melt-inc/autoupgrade
-# github.com/ollama/ollama v0.9.6
+# github.com/ollama/ollama v0.10.0
 ## explicit; go 1.24.0
 github.com/ollama/ollama/api
 github.com/ollama/ollama/auth
