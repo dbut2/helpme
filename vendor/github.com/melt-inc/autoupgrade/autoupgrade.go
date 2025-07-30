@@ -106,6 +106,6 @@ func (u *UpgradeResult) NewBuildInfo() (*debug.BuildInfo, error) {
 // It combines the module path, package path, and version into the format
 // expected by go install.
 func fullPath(modulePath, packagePath, version string) string {
-	ret := path.Join(modulePath, packagePath+"@"+version)
+	ret := path.Join(modulePath, packagePath) + "@" + version
 	return ret
 }
