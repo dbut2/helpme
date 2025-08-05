@@ -6,8 +6,8 @@ github.com/liushuangls/go-anthropic v1.6.0 h1:8hDEn/EJkeerOFwnQ10efTlRIU6VO+IxE6
 github.com/liushuangls/go-anthropic v1.6.0/go.mod h1:sUg9f/ZHoia6Nc8zoNvT7+KavHwMq2eL3VY1Mgf6I7Y=
 github.com/melt-inc/autoupgrade v0.0.0-20250713011133-88a78ff3b355 h1:dIDtgwAMxAoUlOZNmGa0GOCGz6E32rPtkhPxW2SerYk=
 github.com/melt-inc/autoupgrade v0.0.0-20250713011133-88a78ff3b355/go.mod h1:ReJ0BvrBp4RRG0KZPkFFPBBNiA+0uzolyJjkcjkW3lY=
-github.com/ollama/ollama v0.10.1 h1:YJGiYpnKW3Q3v7+s0n1OlCaHcFFvSCVd+t0FvS9NZ2w=
-github.com/ollama/ollama v0.10.1/go.mod h1:9+1//yWPsDE2u+l1a5mpaKrYw4VdnSsRU3ioq5BvMms=
+github.com/ollama/ollama v0.11.2 h1:wuHKpb3dr/rO6Bx0L9UOOVcHqmhppOVm1nd9VgFD8CE=
+github.com/ollama/ollama v0.11.2/go.mod h1:9+1//yWPsDE2u+l1a5mpaKrYw4VdnSsRU3ioq5BvMms=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/sashabaranov/go-openai v1.40.5 h1:SwIlNdWflzR1Rxd1gv3pUg6pwPc6cQ2uMoHs8ai+/NY=
