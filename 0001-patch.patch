@@ -1,0 +1,24 @@
+From b0f4d4f0c7d0cd473c4f98f3f39e57d69dfcc3e3 Mon Sep 17 00:00:00 2001
+From: Dylan Butler <dylan@but.la>
+Date: Wed, 13 Aug 2025 10:13:38 +1000
+Subject: [PATCH] patch
+
+---
+ vendor/github.com/melt-inc/autoupgrade/autoupgrade.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vendor/github.com/melt-inc/autoupgrade/autoupgrade.go b/vendor/github.com/melt-inc/autoupgrade/autoupgrade.go
+index 641f77e..5b966e4 100644
+--- a/vendor/github.com/melt-inc/autoupgrade/autoupgrade.go
++++ b/vendor/github.com/melt-inc/autoupgrade/autoupgrade.go
+@@ -106,6 +106,6 @@ func (u *UpgradeResult) NewBuildInfo() (*debug.BuildInfo, error) {
+ // It combines the module path, package path, and version into the format
+ // expected by go install.
+ func fullPath(modulePath, packagePath, version string) string {
+-	ret := path.Join(modulePath, packagePath+"@"+version)
++	ret := path.Join(modulePath, packagePath) + "@" + version
+ 	return ret
+ }
+-- 
+2.39.5 (Apple Git-154)
+
