@@ -1,6 +1,6 @@
 module dbut.dev/helpme
 
-go 1.24.0
+go 1.25.0
 
 require (
 	github.com/liushuangls/go-anthropic v1.6.0
