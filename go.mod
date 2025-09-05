@@ -3,7 +3,7 @@ module dbut.dev/helpme
 go 1.25.0
 
 require (
-	github.com/liushuangls/go-anthropic v1.6.0
+	github.com/liushuangls/go-anthropic/v2 v2.15.2
 	github.com/melt-inc/autoupgrade v0.0.0-20250713011133-88a78ff3b355
 	github.com/ollama/ollama v0.11.10
 	github.com/sashabaranov/go-openai v1.41.1
