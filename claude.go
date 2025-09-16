@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/liushuangls/go-anthropic"
+	"github.com/liushuangls/go-anthropic/v2"
 )
 
 type ClaudeConfig struct {
@@ -47,7 +47,7 @@ func (c *Claude) Generate(ctx context.Context, system, prompt string, ch chan st
 			errCh <- response.Error
 		},
 		OnContentBlockDelta: func(data anthropic.MessagesEventContentBlockDeltaData) {
-			ch <- data.Delta.Text
+			ch <- *data.Delta.Text
 		},
 	})
 	return err
