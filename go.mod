@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/liushuangls/go-anthropic/v2 v2.16.2
 	github.com/melt-inc/autoupgrade v0.0.0-20250713011133-88a78ff3b355
-	github.com/ollama/ollama v0.13.0
+	github.com/ollama/ollama v0.13.1
 	github.com/sashabaranov/go-openai v1.41.2
 	github.com/sethvargo/go-envconfig v1.3.0
 )
